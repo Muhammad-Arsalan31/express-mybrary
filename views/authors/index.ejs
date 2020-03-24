@@ -1,0 +1,27 @@
+<h2>Search Author</h2>
+
+<form action="/authors" method="GET">
+  <label for="name">Name</label>
+  <input
+    type="text"
+    id="searchAuthorField"
+    name="name"
+    value="<%= searchOpt.name %> "
+    onfocus="this.value = ''"
+  />
+  <button type="submit" id="seachAuthorBtn">Search</button>
+</form>
+<br />
+<% authors.forEach(author => { %>
+<div><%= author.name %></div>
+<% }) %>
+<!-- <script>
+      let input = document.querySelector("#searchAuthorField");
+
+
+  let btn = document.querySelector("#seachAuthorBtn");
+  btn.addEventListener("click", function() {
+    let val = input.value;
+    val.trim();
+  });
+</script> -->
